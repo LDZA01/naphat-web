@@ -11,7 +11,7 @@ const geistSans = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Naphat Chartwanchai | Full-stack & AI Engineer",
+  title: "Naphat Chartwanchai",
   description:
     "Computer Engineering student at Chulalongkorn University. Passionate about Software Engineering, Data Science, and AI.",
   keywords: [
