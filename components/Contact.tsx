@@ -15,12 +15,12 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12">
             Get In Touch
           </h2>
 
-          <div className="bg-white dark:bg-slate-900 rounded-lg p-8 shadow-lg">
-            <p className="text-slate-600 dark:text-slate-300 text-lg mb-8">
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
+            <p className="text-gray-700 dark:text-gray-300 text-lg mb-8">
               I&apos;m always open to discussing new opportunities, projects, or collaborations.
               Feel free to reach out!
             </p>
@@ -32,10 +32,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors group"
+                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
               >
-                <Mail className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <Mail className="w-5 h-5 text-black dark:text-white" />
+                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
                   {contact.email}
                 </span>
               </motion.a>
@@ -46,10 +46,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors group"
+                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
               >
-                <Phone className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <Phone className="w-5 h-5 text-black dark:text-white" />
+                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
                   {contact.phone}
                 </span>
               </motion.a>
@@ -62,10 +62,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-900/20 transition-colors group"
+                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
               >
-                <Github className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-slate-700 dark:text-slate-300 group-hover:text-indigo-600 dark:group-hover:text-indigo-400">
+                <Github className="w-5 h-5 text-black dark:text-white" />
+                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
                   github.com/{contact.github.username}
                 </span>
               </motion.a>
@@ -75,10 +75,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-slate-50 dark:bg-slate-800 rounded-lg"
+                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700"
               >
-                <MapPin className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-slate-700 dark:text-slate-300">
+                <MapPin className="w-5 h-5 text-black dark:text-white" />
+                <span className="text-gray-700 dark:text-gray-300">
                   {personalInfo.location}
                 </span>
               </motion.div>

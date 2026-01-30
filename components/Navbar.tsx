@@ -32,7 +32,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm"
+          ? "bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-gray-800"
           : "bg-transparent"
       }`}
     >
@@ -41,7 +41,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="#home"
-            className="text-2xl font-bold text-slate-900 dark:text-white hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+            className="text-2xl font-bold text-black dark:text-white hover:text-gray-600 dark:hover:text-gray-400 transition-colors"
           >
             {personalInfo.shortName}
           </Link>
@@ -52,7 +52,7 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium"
+                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors text-sm font-medium"
               >
                 {link.name}
               </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
               href={contact.github.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
               aria-label="GitHub Profile"
             >
               <Github className="w-5 h-5" />
@@ -73,7 +73,7 @@ export default function Navbar() {
             {mounted && (
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
                 aria-label="Toggle theme"
               >
                 {theme === "dark" ? "🌞" : "🌙"}
@@ -84,7 +84,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="md:hidden p-2 text-slate-700 dark:text-slate-300"
+            className="md:hidden p-2 text-black dark:text-white"
             aria-label="Toggle menu"
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -99,24 +99,24 @@ export default function Navbar() {
                 key={link.name}
                 href={link.href}
                 onClick={toggleMenu}
-                className="block text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors text-sm font-medium"
+                className="block text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors text-sm font-medium"
               >
                 {link.name}
               </Link>
             ))}
-            <div className="flex items-center space-x-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+            <div className="flex items-center space-x-4 pt-4 border-t border-gray-300 dark:border-gray-700">
               <a
                 href={contact.github.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                className="text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
               {mounted && (
                 <button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
                 >
                   {theme === "dark" ? "🌞" : "🌙"}
                 </button>

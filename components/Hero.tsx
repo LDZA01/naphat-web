@@ -21,8 +21,8 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-6">
-            Hi, I&apos;m <span className="text-indigo-600 dark:text-indigo-400">{personalInfo.name}</span>
+          <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6">
+            Hi, I&apos;m <span className="text-gray-700 dark:text-gray-300">{personalInfo.name}</span>
           </h1>
         </motion.div>
 
@@ -30,7 +30,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8"
+          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
         >
           {personalInfo.title} at {personalInfo.university}
           <br />
@@ -49,7 +49,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              className="px-4 py-2 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium"
+              className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700"
             >
               {tech}
             </motion.span>
@@ -64,7 +64,7 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToSection("projects")}
-            className="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2"
+            className="px-8 py-3 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2"
           >
             View Projects
             <ArrowDown className="w-4 h-4" />
@@ -72,7 +72,7 @@ export default function Hero() {
           <a
             href={contact.resume}
             download
-            className="px-8 py-3 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2"
+            className="px-8 py-3 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-black dark:text-white rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700"
           >
             <Download className="w-4 h-4" />
             Download Resume

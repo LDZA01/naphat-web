@@ -13,11 +13,11 @@ export default function About() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center">
             About Me
           </h2>
 
-          <div className="space-y-6 text-slate-600 dark:text-slate-300 text-lg leading-relaxed">
+          <div className="space-y-6 text-gray-700 dark:text-gray-300 text-lg leading-relaxed">
             {personalInfo.about.map((paragraph, index) => (
               <motion.p
                 key={index}
@@ -37,14 +37,14 @@ export default function About() {
               viewport={{ once: true }}
               className="pt-6"
             >
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
                 Interests
               </h3>
               <div className="flex flex-wrap gap-3">
                 {personalInfo.interests.map((interest) => (
                   <span
                     key={interest}
-                    className="px-4 py-2 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-lg"
+                    className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-black dark:text-white rounded-lg border border-gray-300 dark:border-gray-700"
                   >
                     {interest}
                   </span>
@@ -59,17 +59,17 @@ export default function About() {
               viewport={{ once: true }}
               className="pt-6"
             >
-              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-3">
+              <h3 className="text-xl font-semibold text-black dark:text-white mb-3">
                 Languages
               </h3>
               <div className="space-y-2">
                 {personalInfo.languages.map((lang) => (
                   <div key={lang.language} className="flex items-center gap-3">
-                    <span className="text-slate-700 dark:text-slate-300 font-medium">
+                    <span className="text-black dark:text-white font-medium">
                       {lang.language}
                     </span>
-                    <span className="text-slate-500 dark:text-slate-400">•</span>
-                    <span className="text-slate-600 dark:text-slate-400">
+                    <span className="text-gray-500 dark:text-gray-500">•</span>
+                    <span className="text-gray-600 dark:text-gray-400">
                       {lang.proficiency}
                     </span>
                   </div>

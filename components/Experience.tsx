@@ -6,7 +6,7 @@ import { experiences } from "../data/portfolio";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6 bg-slate-50 dark:bg-slate-800/50">
+    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,7 @@ export default function Experience() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center">
             Experience
           </h2>
 
@@ -28,36 +28,36 @@ export default function Experience() {
                 viewport={{ once: true }}
                 className={`relative pl-8 border-l-2 ${
                   exp.highlight
-                    ? "border-indigo-600 dark:border-indigo-400"
-                    : "border-slate-300 dark:border-slate-600"
+                    ? "border-black dark:border-white"
+                    : "border-gray-300 dark:border-gray-700"
                 }`}
               >
                 <div
                   className={`absolute left-[-9px] top-0 w-4 h-4 rounded-full ${
                     exp.highlight
-                      ? "bg-indigo-600 dark:bg-indigo-400"
-                      : "bg-slate-300 dark:bg-slate-600"
+                      ? "bg-black dark:bg-white"
+                      : "bg-gray-300 dark:bg-gray-700"
                   }`}
                 />
 
-                <div className="bg-white dark:bg-slate-900 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-800">
                   <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-1">
+                      <h3 className="text-2xl font-bold text-black dark:text-white mb-1">
                         {exp.title}
                       </h3>
-                      <p className="text-lg text-indigo-600 dark:text-indigo-400 font-semibold">
+                      <p className="text-lg text-gray-700 dark:text-gray-300 font-semibold">
                         {exp.company}
                       </p>
                     </div>
                     {exp.highlight && (
-                      <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium">
+                      <span className="px-3 py-1 bg-black dark:bg-white text-white dark:text-black rounded-full text-sm font-medium">
                         Current
                       </span>
                     )}
                   </div>
 
-                  <div className="flex flex-wrap gap-4 text-sm text-slate-600 dark:text-slate-400 mb-4">
+                  <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400 mb-4">
                     <div className="flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       <span>{exp.period}</span>
@@ -76,9 +76,9 @@ export default function Experience() {
                     {exp.description.map((desc, i) => (
                       <li
                         key={i}
-                        className="text-slate-600 dark:text-slate-300 flex gap-2"
+                        className="text-gray-700 dark:text-gray-300 flex gap-2"
                       >
-                        <span className="text-indigo-600 dark:text-indigo-400 mt-1">•</span>
+                        <span className="text-black dark:text-white mt-1">•</span>
                         <span>{desc}</span>
                       </li>
                     ))}
@@ -88,7 +88,7 @@ export default function Experience() {
                     {exp.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 rounded-md text-sm"
+                        className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md text-sm border border-gray-300 dark:border-gray-700"
                       >
                         {tech}
                       </span>

@@ -14,7 +14,7 @@ export default function Projects() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-12 text-center">
+          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center">
             Featured Projects
           </h2>
 
@@ -26,26 +26,26 @@ export default function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className={`relative bg-white dark:bg-slate-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all group ${
-                  project.highlight ? "border-2 border-indigo-600 dark:border-indigo-400" : ""
+                className={`relative bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all group border ${
+                  project.highlight ? "border-2 border-black dark:border-white" : "border-gray-200 dark:border-gray-800"
                 }`}
               >
                 {project.highlight && (
-                  <div className="absolute -top-3 -right-3 bg-indigo-600 dark:bg-indigo-400 text-white dark:text-slate-900 rounded-full p-2">
+                  <div className="absolute -top-3 -right-3 bg-black dark:bg-white text-white dark:text-black rounded-full p-2">
                     <Star className="w-5 h-5" fill="currentColor" />
                   </div>
                 )}
 
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-black dark:text-white mb-2 group-hover:text-gray-600 dark:group-hover:text-gray-400 transition-colors">
                     {project.title}
                   </h3>
                   {project.subtitle && (
-                    <p className="text-sm text-indigo-600 dark:text-indigo-400 font-semibold mb-2">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 font-semibold mb-2">
                       {project.subtitle}
                     </p>
                   )}
-                  <p className="text-slate-600 dark:text-slate-300 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {project.description}
                   </p>
                 </div>
@@ -54,9 +54,9 @@ export default function Projects() {
                   {project.longDescription.map((desc, i) => (
                     <li
                       key={i}
-                      className="text-sm text-slate-600 dark:text-slate-400 flex gap-2"
+                      className="text-sm text-gray-600 dark:text-gray-400 flex gap-2"
                     >
-                      <span className="text-indigo-600 dark:text-indigo-400 mt-1">•</span>
+                      <span className="text-black dark:text-white mt-1">•</span>
                       <span>{desc}</span>
                     </li>
                   ))}
@@ -66,15 +66,15 @@ export default function Projects() {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-md text-sm font-medium"
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-md text-sm font-medium border border-gray-300 dark:border-gray-700"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex items-center gap-2 text-sm text-slate-500 dark:text-slate-400">
-                  <span className="px-2 py-1 bg-slate-100 dark:bg-slate-800 rounded">
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <span className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-700">
                     {project.category}
                   </span>
                 </div>
