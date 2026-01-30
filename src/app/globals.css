@@ -6,6 +6,12 @@
 
 body {
   font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth transitions for all interactive elements */
+button, a, input, textarea {
+  transition: all 0.2s ease;
 }
 
 /* Custom scrollbar - Black & White Theme */

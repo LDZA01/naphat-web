@@ -91,6 +91,7 @@ export const projects = [
     category: "AI/ML",
     highlight: true,
     featured: true,
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80",
   },
   {
     id: 2,
@@ -106,6 +107,7 @@ export const projects = [
     category: "AI/ML",
     highlight: true,
     featured: true,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80",
   },
 ];
 

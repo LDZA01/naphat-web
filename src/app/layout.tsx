@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
 import Providers from "../../components/Providers";
+import LoadingScreen from "../../components/LoadingScreen";
+import ScrollProgress from "../../components/ScrollProgress";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,7 +39,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} antialiased`}>
-        <Providers>{children}</Providers>
+        <Providers>
+          <LoadingScreen />
+          <ScrollProgress />
+          {children}
+        </Providers>
       </body>
     </html>
   );

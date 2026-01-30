@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Github } from "lucide-react";
+import { Menu, X, Github, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import { motion, AnimatePresence } from "framer-motion";
 import { navLinks, personalInfo, contact } from "../data/portfolio";
 
 export default function Navbar() {
@@ -71,13 +72,37 @@ export default function Navbar() {
 
             {/* Theme Toggle */}
             {mounted && (
-              <button
+              <motion.button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
+                className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700 relative overflow-hidden"
                 aria-label="Toggle theme"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
-                {theme === "dark" ? "🌞" : "🌙"}
-              </button>
+                <AnimatePresence mode="wait">
+                  {theme === "dark" ? (
+                    <motion.div
+                      key="sun"
+                      initial={{ y: -20, opacity: 0, rotate: -90 }}
+                      animate={{ y: 0, opacity: 1, rotate: 0 }}
+                      exit={{ y: 20, opacity: 0, rotate: 90 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Sun className="w-5 h-5" />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="moon"
+                      initial={{ y: -20, opacity: 0, rotate: -90 }}
+                      animate={{ y: 0, opacity: 1, rotate: 0 }}
+                      exit={{ y: 20, opacity: 0, rotate: 90 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Moon className="w-5 h-5" />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.button>
             )}
           </div>
 
@@ -114,12 +139,36 @@ export default function Navbar() {
                 <Github className="w-5 h-5" />
               </a>
               {mounted && (
-                <button
+                <motion.button
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700"
+                  className="p-2 rounded-lg bg-gray-100 dark:bg-gray-900 text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors border border-gray-300 dark:border-gray-700 relative overflow-hidden"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  {theme === "dark" ? "🌞" : "🌙"}
-                </button>
+                  <AnimatePresence mode="wait">
+                    {theme === "dark" ? (
+                      <motion.div
+                        key="sun-mobile"
+                        initial={{ y: -20, opacity: 0, rotate: -90 }}
+                        animate={{ y: 0, opacity: 1, rotate: 0 }}
+                        exit={{ y: 20, opacity: 0, rotate: 90 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Sun className="w-5 h-5" />
+                      </motion.div>
+                    ) : (
+                      <motion.div
+                        key="moon-mobile"
+                        initial={{ y: -20, opacity: 0, rotate: -90 }}
+                        animate={{ y: 0, opacity: 1, rotate: 0 }}
+                        exit={{ y: 20, opacity: 0, rotate: 90 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <Moon className="w-5 h-5" />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </motion.button>
               )}
             </div>
           </div>

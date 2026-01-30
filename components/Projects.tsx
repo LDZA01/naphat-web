@@ -3,8 +3,15 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 import { projects } from "../data/portfolio";
+import { useState } from "react";
+import ImageModal from "./ImageModal";
 
 export default function Projects() {
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
   return (
     <section id="projects" className="py-20 px-6">
       <div className="container mx-auto max-w-6xl">
@@ -34,6 +41,24 @@ export default function Projects() {
                   <div className="absolute -top-3 -right-3 bg-black dark:bg-white text-white dark:text-black rounded-full p-2">
                     <Star className="w-5 h-5" fill="currentColor" />
                   </div>
+                )}
+
+                {/* Project Image */}
+                {project.image && (
+                  <motion.div
+                    className="mb-4 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 cursor-pointer relative"
+                    whileHover={{ scale: 1.02 }}
+                    onClick={() =>
+                      setSelectedImage({ src: project.image!, alt: project.title })
+                    }
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover hover:opacity-90 transition-opacity"
+                    />
+                  </motion.div>
                 )}
 
                 <div className="mb-4">
@@ -83,6 +108,14 @@ export default function Projects() {
           </div>
         </motion.div>
       </div>
+
+      {/* Image Modal */}
+      <ImageModal
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+        imageSrc={selectedImage?.src || ""}
+        alt={selectedImage?.alt || ""}
+      />
     </section>
   );
 }
