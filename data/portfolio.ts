@@ -7,7 +7,7 @@ export const personalInfo = {
   gpax: "3.31/4.00",
   tagline: "Passionate about Software Engineering, Data Science, and AI",
   about: [
-    "I am a Computer Engineering student based in Nonthaburi, Thailand.",
+    "I am a Computer Engineering student at Chulalongkorn University.",
     "I have hands-on experience in building enterprise-grade applications and AI-powered solutions using modern tech stacks like Next.js, Spring Boot, and Azure.",
   ],
   interests: ["Investing", "Artificial Intelligence", "Sport"],
