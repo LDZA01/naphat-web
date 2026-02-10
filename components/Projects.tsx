@@ -46,8 +46,9 @@ export default function Projects() {
                 {/* Project Image */}
                 {project.image && (
                   <motion.div
-                    className="mb-4 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 cursor-pointer relative"
+                    className="mb-4 overflow-hidden rounded-lg border border-gray-200 dark:border-gray-800 cursor-pointer relative bg-gray-50 dark:bg-gray-950"
                     whileHover={{ scale: 1.02 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                     onClick={() =>
                       setSelectedImage({ src: project.image!, alt: project.title })
                     }
@@ -56,7 +57,7 @@ export default function Projects() {
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover hover:opacity-90 transition-opacity"
+                      className="w-full h-48 object-contain hover:opacity-90 transition-opacity p-2"
                     />
                   </motion.div>
                 )}

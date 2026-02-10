@@ -22,7 +22,7 @@ export default function Hero() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6">
-            Hi, I&apos;m <span className="text-gray-700 dark:text-gray-300">{personalInfo.name}</span>
+            Hi, I&apos;m <span className="bg-gradient-to-r from-gray-700 to-black dark:from-gray-300 dark:to-white bg-clip-text text-transparent">{personalInfo.name}</span>
           </h1>
         </motion.div>
 

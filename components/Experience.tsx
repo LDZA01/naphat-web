@@ -6,7 +6,7 @@ import { experiences } from "../data/portfolio";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-gray-950">
+    <section id="experience" className="py-20 px-6 bg-gray-50 dark:bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -32,7 +32,11 @@ export default function Experience() {
                     : "border-gray-300 dark:border-gray-700"
                 }`}
               >
-                <div
+                <motion.div
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + 0.2 }}
+                  viewport={{ once: true }}
                   className={`absolute left-[-9px] top-0 w-4 h-4 rounded-full ${
                     exp.highlight
                       ? "bg-black dark:bg-white"

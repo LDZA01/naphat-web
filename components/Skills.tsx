@@ -7,7 +7,7 @@ export default function Skills() {
   const categories = Object.keys(skills) as Array<keyof typeof skills>;
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-gray-950">
+    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,12 +34,14 @@ export default function Skills() {
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {skills[category].map((skill) => (
-                    <span
+                    <motion.span
                       key={skill}
-                      className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-300 dark:border-gray-700"
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-300 dark:border-gray-700 cursor-default"
                     >
                       {skill}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </motion.div>
