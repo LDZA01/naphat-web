@@ -6,7 +6,7 @@ import { contact, personalInfo } from "../data/portfolio";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 px-6">
+    <section id="contact" className="py-16 md:py-20 lg:py-28 px-4 md:px-6">
       <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,12 +15,12 @@ export default function Contact() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12">
+          <h2 className="display-title text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--ink)] mb-10 md:mb-12">
             Get In Touch
           </h2>
 
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-8 shadow-lg border border-gray-200 dark:border-gray-800">
-            <p className="text-gray-700 dark:text-gray-300 text-lg mb-8">
+          <div className="section-shell rounded-2xl p-8">
+            <p className="text-[var(--ink-soft)] text-lg mb-8">
               I&apos;m always open to discussing new opportunities, projects, or collaborations.
               Feel free to reach out!
             </p>
@@ -32,10 +32,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
+                className="flex items-center justify-center gap-3 p-4 bg-white/80 rounded-xl hover:bg-white transition-colors group border border-[var(--stroke)]"
               >
-                <Mail className="w-5 h-5 text-black dark:text-white" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
+                <Mail className="w-5 h-5 text-[var(--ink)]" />
+                <span className="text-[var(--ink-soft)] group-hover:text-[var(--ink)]">
                   {contact.email}
                 </span>
               </motion.a>
@@ -46,10 +46,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.1 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
+                className="flex items-center justify-center gap-3 p-4 bg-white/80 rounded-xl hover:bg-white transition-colors group border border-[var(--stroke)]"
               >
-                <Phone className="w-5 h-5 text-black dark:text-white" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
+                <Phone className="w-5 h-5 text-[var(--ink)]" />
+                <span className="text-[var(--ink-soft)] group-hover:text-[var(--ink)]">
                   {contact.phone}
                 </span>
               </motion.a>
@@ -62,10 +62,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors group border border-gray-200 dark:border-gray-700"
+                className="flex items-center justify-center gap-3 p-4 bg-white/80 rounded-xl hover:bg-white transition-colors group border border-[var(--stroke)]"
               >
-                <Github className="w-5 h-5 text-black dark:text-white" />
-                <span className="text-gray-700 dark:text-gray-300 group-hover:text-black dark:group-hover:text-white">
+                <Github className="w-5 h-5 text-[var(--ink)]" />
+                <span className="text-[var(--ink-soft)] group-hover:text-[var(--ink)]">
                   github.com/{contact.github.username}
                 </span>
               </motion.a>
@@ -75,12 +75,10 @@ export default function Contact() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="flex items-center justify-center gap-3 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700"
+                className="flex items-center justify-center gap-3 p-4 bg-white/80 rounded-xl border border-[var(--stroke)]"
               >
-                <MapPin className="w-5 h-5 text-black dark:text-white" />
-                <span className="text-gray-700 dark:text-gray-300">
-                  {personalInfo.location}
-                </span>
+                <MapPin className="w-5 h-5 text-[var(--ink)]" />
+                <span className="text-[var(--ink-soft)]">{personalInfo.location}</span>
               </motion.div>
             </div>
           </div>

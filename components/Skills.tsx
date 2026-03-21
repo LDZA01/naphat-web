@@ -7,7 +7,7 @@ export default function Skills() {
   const categories = Object.keys(skills) as Array<keyof typeof skills>;
 
   return (
-    <section id="skills" className="py-20 px-6 bg-gray-50 dark:bg-black">
+    <section id="skills" className="py-16 md:py-20 lg:py-28 px-4 md:px-6">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,7 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-black dark:text-white mb-12 text-center">
+          <h2 className="display-title text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--ink)] mb-10 md:mb-12 text-center">
             Skills & Technologies
           </h2>
 
@@ -27,9 +27,9 @@ export default function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-800"
+                className="section-shell rounded-2xl p-6"
               >
-                <h3 className="text-xl font-bold text-black dark:text-white mb-4">
+                <h3 className="text-xl font-bold text-[var(--ink)] mb-4">
                   {category}
                 </h3>
                 <div className="flex flex-wrap gap-2">
@@ -38,7 +38,7 @@ export default function Skills() {
                       key={skill}
                       whileHover={{ scale: 1.05, y: -2 }}
                       transition={{ type: "spring", stiffness: 400 }}
-                      className="px-3 py-1.5 bg-gray-100 dark:bg-gray-800 text-black dark:text-white rounded-md text-sm hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors border border-gray-300 dark:border-gray-700 cursor-default"
+                      className="px-3 py-1.5 bg-white/85 text-[var(--ink)] rounded-lg text-sm hover:bg-white transition-colors border border-[var(--stroke)] cursor-default"
                     >
                       {skill}
                     </motion.span>

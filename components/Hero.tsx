@@ -13,16 +13,22 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 pt-20"
+      className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-24 md:pt-32 overflow-hidden"
     >
-      <div className="container mx-auto max-w-4xl text-center">
+      <div className="pointer-events-none absolute -left-24 top-24 h-64 w-64 rounded-full bg-[rgba(201,122,90,0.18)] blur-3xl" />
+      <div className="pointer-events-none absolute -right-20 bottom-16 h-72 w-72 rounded-full bg-[rgba(139,111,71,0.14)] blur-3xl" />
+
+      <div className="container mx-auto max-w-5xl text-center section-shell rounded-[2rem] px-6 md:px-12 lg:px-14 py-12 md:py-16 lg:py-14">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-7xl font-bold text-black dark:text-white mb-6">
-            Hi, I&apos;m <span className="bg-gradient-to-r from-gray-700 to-black dark:from-gray-300 dark:to-white bg-clip-text text-transparent">{personalInfo.name}</span>
+          <p className="text-sm uppercase tracking-[0.24em] text-[var(--ink-soft)] mb-5 font-semibold">
+            Portfolio 2026
+          </p>
+          <h1 className="display-title text-5xl md:text-7xl font-bold text-[var(--ink)] mb-6 leading-tight">
+            Hi, I&apos;m <span className="accent-gradient">{personalInfo.name}</span>
           </h1>
         </motion.div>
 
@@ -30,7 +36,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
+          className="text-xl md:text-2xl text-[var(--ink-soft)] mb-10"
         >
           {personalInfo.title} at {personalInfo.university}
           <br />
@@ -49,7 +55,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              className="px-4 py-2 bg-gray-200 dark:bg-gray-800 text-black dark:text-white rounded-full text-sm font-medium border border-gray-300 dark:border-gray-700"
+              className="px-4 py-2 rounded-full text-sm font-semibold bg-white/75 text-[var(--ink)] border border-[var(--stroke)] shadow-[0_8px_20px_rgba(75,60,45,0.12)]"
             >
               {tech}
             </motion.span>
@@ -64,7 +70,7 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToSection("projects")}
-            className="px-8 py-3 bg-black hover:bg-gray-800 dark:bg-white dark:hover:bg-gray-200 text-white dark:text-black rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2"
+            className="px-8 py-3 bg-[var(--accent)] hover:bg-[#b8714e] text-white rounded-xl font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-[0_10px_22px_rgba(201,122,90,0.35)]"
           >
             View Projects
             <ArrowDown className="w-4 h-4" />
@@ -72,7 +78,7 @@ export default function Hero() {
           <a
             href={contact.resume}
             download
-            className="px-8 py-3 bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 dark:hover:bg-gray-800 text-black dark:text-white rounded-lg font-medium transition-colors inline-flex items-center justify-center gap-2 border border-gray-300 dark:border-gray-700"
+            className="px-8 py-3 bg-white/70 hover:bg-white text-[var(--ink)] rounded-xl font-semibold transition-colors inline-flex items-center justify-center gap-2 border border-[var(--stroke)]"
           >
             <Download className="w-4 h-4" />
             Download Resume

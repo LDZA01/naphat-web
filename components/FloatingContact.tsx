@@ -10,10 +10,9 @@ export default function FloatingContact() {
 
   return (
     <>
-      {/* Floating Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-24 right-8 z-40 p-4 bg-black dark:bg-white text-white dark:text-black rounded-full shadow-lg hover:scale-110 transition-transform"
+        className="fixed bottom-24 right-8 z-40 p-4 bg-gradient-to-br from-[#c97a5a] to-[#8b6f47] text-white rounded-full shadow-[0_14px_30px_rgba(75,60,45,0.38)] hover:scale-110 transition-transform"
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         aria-label="Contact"
@@ -43,7 +42,6 @@ export default function FloatingContact() {
         </AnimatePresence>
       </motion.button>
 
-      {/* Contact Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -51,31 +49,29 @@ export default function FloatingContact() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ type: "spring", damping: 25 }}
-            className="fixed bottom-40 right-8 z-40 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg shadow-xl p-4 min-w-[200px]"
+            className="fixed bottom-40 right-8 z-40 section-shell rounded-xl p-4 min-w-[210px]"
           >
-            <p className="text-sm font-semibold text-black dark:text-white mb-3">
-              Quick Contact
-            </p>
+            <p className="text-sm font-semibold text-[var(--ink)] mb-3">Quick Contact</p>
             <div className="space-y-2">
               <a
                 href={`mailto:${contact.email}`}
-                className="block text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                className="block text-sm text-[var(--ink-soft)] hover:text-[var(--accent-alt)] transition-colors"
               >
-                📧 Email
+                Email
               </a>
               <a
                 href={`tel:${contact.phone}`}
-                className="block text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                className="block text-sm text-[var(--ink-soft)] hover:text-[var(--accent-alt)] transition-colors"
               >
-                📞 Call
+                Call
               </a>
               <a
                 href={contact.github.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-sm text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors"
+                className="block text-sm text-[var(--ink-soft)] hover:text-[var(--accent-alt)] transition-colors"
               >
-                💻 GitHub
+                GitHub
               </a>
             </div>
           </motion.div>

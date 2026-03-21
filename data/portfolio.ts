@@ -111,6 +111,31 @@ export const projects = [
   },
 ];
 
+export const certificates = [
+  {
+    id: 1,
+    title: "CUVET Hackathon 2026 - Finalist",
+    issuer: "CUVET Enterprise",
+    level: "University Level",
+    year: "2026",
+    image: "/images/cuvet-certificate-2026.png",
+    description:
+      "Selected in the final list of top 30 innovations at CUVET Hackathon 2026.",
+    format: "image",
+  },
+  {
+    id: 2,
+    title: "AWS Academy Graduate - Microservices and CI/CD Pipeline Builder",
+    issuer: "AWS Academy",
+    level: "Training Badge",
+    year: "2025",
+    image: "/images/aws-academy-certificate.png",
+    description:
+      "Completed AWS Academy training focused on microservices architecture and CI/CD pipeline implementation.",
+    format: "image",
+  },
+];
+
 export const skills = {
   "Languages & Web": [
     "C++",
@@ -148,6 +173,7 @@ export const navLinks = [
   { name: "About", href: "#about" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
+  { name: "Certificates", href: "#certificates" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];

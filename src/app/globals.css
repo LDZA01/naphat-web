@@ -1,45 +1,159 @@
 @import "tailwindcss";
 
 * {
+  box-sizing: border-box;
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
-  transition: background-color 0.3s ease, color 0.3s ease;
+:root {
+  /* Warm Editorial Palette */
+  --bg-start: #faf6f1;
+  --bg-mid: #f3ece4;
+  --bg-end: #f0e8e0;
+  --ink: #2b2420;
+  --ink-soft: #654321;
+  --card: rgba(255, 250, 245, 0.82);
+  --card-strong: rgba(255, 252, 248, 0.94);
+  --stroke: rgba(160, 120, 80, 0.18);
+  --accent: #c97a5a;
+  --accent-alt: #8b6f47;
+  --accent-warm: #d4a574;
+  --accent-deep: #5d4c3f;
 }
 
-/* Smooth transitions for all interactive elements */
+body {
+  font-family: var(--font-body), "Segoe UI", sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 8% 10%, rgba(201, 122, 90, 0.15), transparent 40%),
+    radial-gradient(circle at 92% 85%, rgba(139, 111, 71, 0.12), transparent 38%),
+    linear-gradient(135deg, var(--bg-start) 0%, var(--bg-mid) 50%, var(--bg-end) 100%);
+  min-height: 100vh;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
 button, a, input, textarea {
   transition: all 0.2s ease;
 }
 
-/* Custom scrollbar - Black & White Theme */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 11px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #ffffff;
-}
-
-.dark ::-webkit-scrollbar-track {
-  background: #000000;
+  background: rgba(255, 255, 255, 0.52);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cccccc;
-  border-radius: 5px;
-}
-
-.dark ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: linear-gradient(180deg, #c97a5a, #d4a574);
+  border-radius: 999px;
+  border: 2px solid rgba(255, 248, 240, 0.8);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #999999;
+  background: linear-gradient(180deg, #b86757, #c49664);
 }
 
-.dark ::-webkit-scrollbar-thumb:hover {
-  background: #555555;
+.section-shell {
+  background: linear-gradient(145deg, rgba(255, 252, 248, 0.58), rgba(255, 248, 240, 0.4));
+  border: 1px solid var(--stroke);
+  box-shadow: 0 20px 60px rgba(75, 60, 45, 0.12);
+  backdrop-filter: blur(12px);
+}
+
+.display-title {
+  font-family: var(--font-display), Georgia, serif;
+  letter-spacing: 0.01em;
+}
+
+.accent-gradient {
+  background: linear-gradient(100deg, #c97a5a 12%, #d4a574 50%, #8b6f47 88%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Stagger Reveal Animation */
+@keyframes staggerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger-item-0 { --stagger-delay: 0ms; }
+.stagger-item-1 { --stagger-delay: 80ms; }
+.stagger-item-2 { --stagger-delay: 160ms; }
+.stagger-item-3 { --stagger-delay: 240ms; }
+.stagger-item-4 { --stagger-delay: 320ms; }
+.stagger-item-5 { --stagger-delay: 400ms; }
+
+/* Mobile-first responsive typography and spacing */
+h1, .display-title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.875rem;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+p, li {
+  font-size: 1.0625rem;
+}
+
+/* Tablet breakpoint (768px) */
+@media (min-width: 768px) {
+  h1, .display-title {
+    font-size: 3.5rem;
+    letter-spacing: -0.025em;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+}
+
+/* Desktop breakpoint (1024px) */
+@media (min-width: 1024px) {
+  h1, .display-title {
+    font-size: 4.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+
+/* Spacing scale for premium layout */
+.space-xs { margin-bottom: 0.5rem; }
+.space-sm { margin-bottom: 1rem; }
+.space-md { margin-bottom: 1.5rem; }
+.space-lg { margin-bottom: 2rem; }
+.space-xl { margin-bottom: 3rem; }
+
+@media (min-width: 768px) {
+  .space-lg { margin-bottom: 2.5rem; }
+  .space-xl { margin-bottom: 4rem; }
 }

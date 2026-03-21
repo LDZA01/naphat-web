@@ -1,12 +1,17 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Providers from "../../components/Providers";
 import LoadingScreen from "../../components/LoadingScreen";
 import ScrollProgress from "../../components/ScrollProgress";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-body",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-display",
   subsets: ["latin"],
 });
 
@@ -38,7 +43,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} antialiased`}>
+      <body className={`${manrope.variable} ${playfair.variable} antialiased`}>
         <Providers>
           <LoadingScreen />
           <ScrollProgress />

@@ -48,7 +48,7 @@ export default function ImageModal({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={onClose}
-            className="absolute top-4 right-4 p-2 bg-white dark:bg-black text-black dark:text-white rounded-full hover:scale-110 transition-transform"
+            className="absolute top-4 right-4 p-2 bg-white text-[var(--ink)] rounded-full hover:scale-110 transition-transform border border-[var(--stroke)]"
             aria-label="Close modal"
           >
             <X className="w-6 h-6" />

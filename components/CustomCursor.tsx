@@ -39,7 +39,7 @@ export default function CustomCursor() {
     <>
       {/* Main cursor dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-black dark:bg-white rounded-full pointer-events-none z-[9999] mix-blend-difference"
+        className="fixed top-0 left-0 w-2 h-2 bg-[var(--accent)] rounded-full pointer-events-none z-[9999]"
         animate={{
           x: mousePosition.x - 4,
           y: mousePosition.y - 4,
@@ -55,7 +55,7 @@ export default function CustomCursor() {
 
       {/* Cursor ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 border-2 border-black dark:border-white rounded-full pointer-events-none z-[9998] mix-blend-difference"
+        className="fixed top-0 left-0 w-8 h-8 border-2 border-[var(--accent)] rounded-full pointer-events-none z-[9998]"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
