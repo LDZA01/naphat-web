@@ -24,7 +24,7 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-[rgba(250,246,241,0.80)] backdrop-blur-lg border-b border-[var(--stroke)] shadow-[0_10px_28px_rgba(75,60,45,0.14)]"
+          ? "bg-[rgba(251,250,247,0.82)] backdrop-blur-lg border-b border-[var(--stroke)] shadow-[0_10px_28px_rgba(47,43,35,0.08)]"
           : "bg-transparent"
       }`}
     >
@@ -90,7 +90,7 @@ export default function Navbar() {
                 <Github className="w-5 h-5" />
               </a>
               <motion.div
-                className="text-xs font-semibold px-3 py-1 rounded-full bg-[rgba(20,157,177,0.12)] text-[var(--accent-alt)] border border-[rgba(20,157,177,0.35)]"
+                className="text-xs font-semibold px-3 py-1 rounded-full bg-[rgba(143,125,82,0.10)] text-[var(--accent-alt)] border border-[rgba(143,125,82,0.22)]"
                 whileHover={{ scale: 1.04 }}
               >
                 Let&apos;s build

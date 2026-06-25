@@ -45,7 +45,7 @@ export default function Certificates() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.12 }}
                 viewport={{ once: true }}
-                className="section-shell rounded-2xl p-6 hover:shadow-[0_18px_42px_rgba(57,89,152,0.16)] transition-all"
+                className="section-shell rounded-2xl p-6 hover:shadow-[0_18px_42px_rgba(47,43,35,0.12)] transition-all"
               >
                 {certificate.format === "pdf" ? (
                   <div className="mb-4 rounded-xl border border-[var(--stroke)] bg-white/80 p-6 h-52 flex flex-col items-center justify-center text-center">
@@ -95,7 +95,7 @@ export default function Certificates() {
                     <h3 className="text-xl md:text-2xl font-bold text-[var(--ink)] leading-tight">
                     {certificate.title}
                   </h3>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full bg-[rgba(20,157,177,0.12)] text-[var(--accent-alt)] border border-[rgba(20,157,177,0.35)] whitespace-nowrap">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full bg-[rgba(143,125,82,0.10)] text-[var(--accent-alt)] border border-[rgba(143,125,82,0.22)] whitespace-nowrap">
                     <Award className="w-3.5 h-3.5" />
                     {certificate.year}
                   </span>

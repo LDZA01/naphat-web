@@ -38,7 +38,7 @@ export default function BackToTop() {
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.5 }}
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-50 p-4 bg-gradient-to-br from-[#c97a5a] to-[#8b6f47] text-white rounded-full shadow-[0_14px_30px_rgba(75,60,45,0.38)] hover:scale-110 transition-transform"
+          className="fixed bottom-8 right-8 z-50 p-4 bg-[var(--ink)] text-white rounded-full shadow-[0_14px_30px_rgba(47,43,35,0.18)] hover:bg-[var(--accent-deep)] hover:scale-110 transition-all"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           aria-label="Back to top"

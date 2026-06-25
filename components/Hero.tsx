@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Download } from "lucide-react";
-import { personalInfo, contact } from "../data/portfolio";
+import { ArrowDown } from "lucide-react";
+import { personalInfo } from "../data/portfolio";
 
 export default function Hero() {
   const scrollToSection = (id: string) => {
@@ -15,10 +15,10 @@ export default function Hero() {
       id="home"
       className="relative min-h-screen flex items-center justify-center px-4 md:px-6 pt-24 md:pt-32 overflow-hidden"
     >
-      <div className="pointer-events-none absolute -left-24 top-24 h-64 w-64 rounded-full bg-[rgba(201,122,90,0.18)] blur-3xl" />
-      <div className="pointer-events-none absolute -right-20 bottom-16 h-72 w-72 rounded-full bg-[rgba(139,111,71,0.14)] blur-3xl" />
+      <div className="pointer-events-none absolute inset-x-6 top-28 h-px bg-gradient-to-r from-transparent via-[var(--stroke)] to-transparent" />
+      <div className="pointer-events-none absolute inset-x-6 bottom-20 h-px bg-gradient-to-r from-transparent via-[var(--stroke)] to-transparent" />
 
-      <div className="container mx-auto max-w-5xl text-center section-shell rounded-[2rem] px-6 md:px-12 lg:px-14 py-12 md:py-16 lg:py-14">
+      <div className="container mx-auto max-w-5xl text-center section-shell rounded-2xl px-6 md:px-12 lg:px-14 py-12 md:py-16 lg:py-14">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -55,7 +55,7 @@ export default function Hero() {
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
-              className="px-4 py-2 rounded-full text-sm font-semibold bg-white/75 text-[var(--ink)] border border-[var(--stroke)] shadow-[0_8px_20px_rgba(75,60,45,0.12)]"
+              className="px-4 py-2 rounded-full text-sm font-semibold bg-white/70 text-[var(--ink)] border border-[var(--stroke)] shadow-[0_8px_20px_rgba(47,43,35,0.06)]"
             >
               {tech}
             </motion.span>
@@ -70,7 +70,7 @@ export default function Hero() {
         >
           <button
             onClick={() => scrollToSection("projects")}
-            className="px-8 py-3 bg-[var(--accent)] hover:bg-[#b8714e] text-white rounded-xl font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-[0_10px_22px_rgba(201,122,90,0.35)]"
+            className="px-8 py-3 bg-[var(--ink)] hover:bg-[var(--accent-deep)] text-white rounded-lg font-semibold transition-colors inline-flex items-center justify-center gap-2 shadow-[0_10px_22px_rgba(47,43,35,0.16)]"
           >
             View Projects
             <ArrowDown className="w-4 h-4" />

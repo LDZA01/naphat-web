@@ -38,7 +38,7 @@ export default function LoadingScreen() {
 
   if (!isMounted) {
     return (
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[linear-gradient(135deg,#faf6f1,#f3ece4,#f0e8e0)]">
+      <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[linear-gradient(135deg,#fbfaf7,#f5f2ec,#eee9df)]">
         <h1 className="text-6xl font-bold display-title accent-gradient">NC</h1>
       </div>
     );
@@ -48,7 +48,7 @@ export default function LoadingScreen() {
     <AnimatePresence mode="wait">
       {isLoading && (
         <motion.div
-          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[linear-gradient(135deg,#faf6f1,#f3ece4,#f0e8e0)]"
+          className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[linear-gradient(135deg,#fbfaf7,#f5f2ec,#eee9df)]"
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
@@ -65,7 +65,7 @@ export default function LoadingScreen() {
 
           <div className="w-64 h-1 bg-white/80 rounded-full overflow-hidden border border-[var(--stroke)]">
             <motion.div
-              className="h-full bg-gradient-to-r from-[#c97a5a] via-[#d4a574] to-[#8b6f47]"
+              className="h-full bg-gradient-to-r from-[var(--accent-deep)] via-[var(--accent)] to-[var(--accent-alt)]"
               initial={{ width: "0%" }}
               animate={{ width: `${progress}%` }}
               transition={{ duration: 0.2 }}

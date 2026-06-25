@@ -34,11 +34,11 @@ export default function Projects() {
                 transition={{ duration: 0.6, delay: index * 0.12 }}
                 viewport={{ once: true }}
                 className={`relative rounded-2xl p-6 transition-all group section-shell ${
-                  project.highlight ? "ring-2 ring-[rgba(255,111,97,0.5)]" : ""
+                  project.highlight ? "ring-1 ring-[rgba(143,125,82,0.36)]" : ""
                 }`}
               >
                 {project.highlight && (
-                  <div className="absolute -top-3 -right-3 bg-[var(--accent)] text-white rounded-full p-2 shadow-[0_8px_16px_rgba(255,111,97,0.3)]">
+                  <div className="absolute -top-3 -right-3 bg-[var(--accent)] text-white rounded-full p-2 shadow-[0_8px_16px_rgba(47,43,35,0.14)]">
                     <Star className="w-5 h-5" fill="currentColor" />
                   </div>
                 )}

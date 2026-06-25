@@ -29,7 +29,7 @@ export default function Experience() {
                 className={`relative pl-8 border-l-2 ${
                   exp.highlight
                     ? "border-[var(--accent)]"
-                    : "border-[rgba(68,94,158,0.28)]"
+                    : "border-[rgba(58,55,48,0.16)]"
                 }`}
               >
                 <motion.div
@@ -40,11 +40,11 @@ export default function Experience() {
                   className={`absolute left-[-9px] top-0 w-4 h-4 rounded-full ${
                     exp.highlight
                       ? "bg-[var(--accent)]"
-                      : "bg-[rgba(68,94,158,0.34)]"
+                      : "bg-[rgba(58,55,48,0.24)]"
                   }`}
                 />
 
-                <div className="section-shell rounded-2xl p-5 md:p-6 hover:shadow-[0_18px_42px_rgba(75,60,45,0.18)] transition-shadow">
+                <div className="section-shell rounded-2xl p-5 md:p-6 hover:shadow-[0_18px_42px_rgba(47,43,35,0.12)] transition-shadow">
                   <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 md:gap-4 mb-4">
                     <div>
                       <h3 className="text-xl md:text-2xl font-bold text-[var(--ink)] mb-1">
@@ -55,7 +55,7 @@ export default function Experience() {
                       </p>
                     </div>
                     {exp.highlight && (
-                      <span className="px-3 py-1 bg-[var(--accent)] text-white rounded-full text-xs md:text-sm font-semibold shadow-[0_8px_18px_rgba(201,122,90,0.32)]">
+                      <span className="px-3 py-1 bg-[var(--accent)] text-white rounded-full text-xs md:text-sm font-semibold shadow-[0_8px_18px_rgba(47,43,35,0.14)]">
                         Current
                       </span>
                     )}
