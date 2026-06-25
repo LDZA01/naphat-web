@@ -75,14 +75,6 @@ export default function Hero() {
             View Projects
             <ArrowDown className="w-4 h-4" />
           </button>
-          <a
-            href={contact.resume}
-            download
-            className="px-8 py-3 bg-white/70 hover:bg-white text-[var(--ink)] rounded-xl font-semibold transition-colors inline-flex items-center justify-center gap-2 border border-[var(--stroke)]"
-          >
-            <Download className="w-4 h-4" />
-            Download Resume
-          </a>
         </motion.div>
       </div>
     </section>
